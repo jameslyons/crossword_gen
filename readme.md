@@ -4,7 +4,9 @@ Basically this code first generates large numbers of crossword patterns, which a
 
 Once the patterns are generated, cw_fill2.py uses the wordlist in game2.txt to populate the crossword. These completed crosswords are output to a file that is read by cw_typeset2.py, which outputs a series of tex files which get `include`d into crossword2.tex. It is then simply a matter of compiling the tex file to get a PDF of pretty crossword/codeword puzzles.
 
-If you don't want to generate your own patterns, skip the first 3 steps.
+I wrote some blog posts about this, it has a little extra info. Generating patterns: http://www.cromulentrambling.com/2017/01/creating-crosswords-with-python.html populating them: http://www.cromulentrambling.com/2017/01/creating-crosswords-with-python_15.html
+
+If you don't want to generate your own patterns, skip the first 3 steps below.
 
 - generate patterns with `python cw_genpatterns.py > patterns15.txt`. I left this for a few days, it takes a long time to find good crossword patterns. 
 - some of the patterns aren't good, we have filtered the good ones using `python cw_filterpattern.py > pattern15_6.txt`. 
